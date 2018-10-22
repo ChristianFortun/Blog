@@ -1,7 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: G62
- * Date: 22/10/2018
- * Time: 11:21
- */
+// src/Controller/LuckyController.php
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+
+class LuckyController
+{
+    public function number()
+    {
+        $number = random_int(0, 100);
+
+        return new Response(
+            '<html><body>Lucky number: '.$number.'</body></html>'
+        );
+    }
+}
